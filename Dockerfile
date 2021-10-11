@@ -9,4 +9,5 @@ COPY target/learningspring-${VERSION}.jar target/application.jar
 FROM openjdk:11.0.8-jre-slim
 WORKDIR /app/
 COPY --from=BUILDER /build/target/application.jar /app/
-CMD jar -jar /app/application.jar
+EXPOSE 3000
+ENTRYPOINT ["java","-jar","/app/application.jar"]
