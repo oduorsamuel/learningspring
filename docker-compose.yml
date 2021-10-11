@@ -1,9 +1,9 @@
 version: "3"
 services:
 
-  wagssever:
+  learningspring:
     container_name: learningspring
-    image: backend
+    image: learningspring
     restart: always
     build:
       dockerfile: Dockerfile
